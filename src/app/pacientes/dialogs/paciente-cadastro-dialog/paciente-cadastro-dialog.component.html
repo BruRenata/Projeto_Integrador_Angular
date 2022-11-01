@@ -1,0 +1,23 @@
+<div class="title">
+    <h1 mat-dialog-title class="title">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add" color="accent"></mat-icon>
+       Cadastrando Paciente
+    </h1>
+  </div>
+  <div mat-dialog-content>
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nome:</mat-label>
+        <input type="text" [(ngModel)]="nome" name="nome" matInput placeholder="Oswaldo Tobias">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>CPF:</mat-label>
+        <input [(ngModel)]="cpf" name="cpf" matInput mask="000.000.000-00" placeholder="000.000.000-00">
+      </mat-form-field>
+    </form>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close color="warn">Fechar</button>
+    <button (click)="criarPaciente();" mat-raised-button mat-dialog-close color="primary">Salvar</button>
+  </div>
+  

@@ -1,0 +1,30 @@
+<div class="title">
+  <h1 mat-dialog-title class="title">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add" color="accent"></mat-icon>
+     Cadastrando Médico
+  </h1>
+</div>
+<div mat-dialog-content>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nome:</mat-label>
+      <input type="text" [(ngModel)]="nome" name="nome" matInput placeholder="Oswaldo Tobias">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Especialidade:</mat-label>
+      <input [(ngModel)]="especialidade" name="especialidade" matInput placeholder="Ortopedista">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>CPF:</mat-label>
+      <input [(ngModel)]="cpf" name="cpf" matInput mask="000.000.000-00" placeholder="000.000.000-00">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>CRM:</mat-label>
+      <input [(ngModel)]="crm" name="crm" matInput placeholder="CRM/SC 000000">
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close color="warn">Fechar</button>
+  <button (click)="criarMedico();" mat-raised-button mat-dialog-close color="primary">Salvar</button>
+</div>
